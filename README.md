@@ -35,19 +35,19 @@ Here is an example showing how to use the library to compute certain properties 
 
 // Example: Retrieve the 24th smooth toric Fano variety
 X := FanoX(24);
-Print("The dimension of the variety is: ", Dimension(X));
+print "The dimension of the variety is:", Dimension(X);
 
 // Retrieve the anticanonical polytope of the 24th variety
 P := FanoP(24);
-Print("The polytope has vertices: ", Vertices(P));
+print "The polytope has vertices:", Vertices(P);
 
 // Retrieve the dual variety
 DualX := FanoDualX(24);
-Print("The dual variety dimension is: ", Dimension(DualX));
+print "The dual variety dimension is:", Dimension(DualX);
 
 // Filter varieties based on a condition
 selected := [n : n in [24..147] | Length(FanoX(n)) - Dimension(IrrelevantIdeal(FanoX(n))) ge 3];
-Print("IDs of varieties satisfying the condition: ", selected);
+print "IDs of varieties satisfying the condition:", selected;
 ```
 
 ## Filtering Toric Varieties
