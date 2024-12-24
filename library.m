@@ -44,7 +44,6 @@ FanoP := function(ID)
         line := Gets(fh);
         num -:= 1;
     end while;
-    Close(fh);
     
     // Parse the polytope data
     coeffs := IntegerToSequence(StringToInteger(line), base);
